@@ -416,7 +416,7 @@ defaults write com.apple.mail NSUserKeyEquivalents -dict-add "Send" "@\\U21a9"
 defaults write com.apple.terminal StringEncodings -array 4
 
 # Use a modified version of the Pro theme by default in Terminal.app
-open "$HOME/init/Mathias.terminal"
+open "$HOME/src/dotfiles/init/Mathias.terminal"
 sleep 1 # Wait a bit to make sure the theme is loaded
 defaults write com.apple.Terminal "Default Window Settings" -string "Mathias"
 defaults write com.apple.Terminal "Startup Window Settings" -string "Mathias"
@@ -518,8 +518,8 @@ defaults write com.twitter.twitter-mac HideInBackground -bool true
 ###############################################################################
 
 for app in "Address Book" "Calendar" "Contacts" "Dock" "Finder" "Mail" \
-	"Safari" "SizeUp" "SystemUIServer" "Terminal" "Transmission" "Twitter" \
-	"iCal" "iTunes"; do
-	killall "$app" > /dev/null 2>&1
+        "Safari" "SizeUp" "SystemUIServer" "Terminal" "Transmission" "Twitter" \
+        "iCal" "iTunes"; do
+        killall "$app" > /dev/null 2>&1
 done
 echo "Done. Note that some of these changes require a logout/restart to take effect."
